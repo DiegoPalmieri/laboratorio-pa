@@ -1,0 +1,47 @@
+<div class="form">
+    <form [formGroup]="formulario" autocomplete="off" class="fomulario">
+        <mat-card class="card mx-auto mt-5" style="width: 18rem">
+            <mat-card-header class="text-center bg-primary text-white">
+                <mat-card-title class="text-center">LOGIN</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                <mat-form-field for="email">
+                    <input matInput type="email" placeholder="Inserte su Email" formControlName="email" />
+                    <mat-icon matSuffix disabled="false">mail</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field for="password">
+                    <input matInput type="password" placeholder="Ingrese su Contraseña" formControlName="password" />
+                    <mat-icon matSuffix disabled="false">lock</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field for="rol">
+                    <mat-label>Rol</mat-label>
+                    <mat-select formControlName="rol" >
+                        <mat-option value="">Seleccione</mat-option>
+                        <mat-option value="profesor">Profesor
+                            <mat-icon matSuffix disabled="false">group</mat-icon>
+                        </mat-option>
+                        <mat-option value="admin">Administrador
+                            <mat-icon matSuffix disabled="false">group</mat-icon>
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="text-center">
+                    <button mat-raised-button color="primary" (click)="botonLogin()">
+                        LOGIN
+                        <mat-icon matSuffix disabled="false">login</mat-icon>
+                    </button>
+                </div>
+                <br />
+
+                <div class="text-center">
+                    <p>¿No tienes una cuenta?<br /></p>
+                    <a routerLink="registro">Registrate</a>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>

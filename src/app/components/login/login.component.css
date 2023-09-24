@@ -1,0 +1,10 @@
+.form {
+    position: absolute; /* Posiciona el formulario de forma absoluta */
+    left: 50%; /* Mueve el formulario al 50% de la izquierda del elemento padre */
+    top: 50%; /* Mueve el formulario al 50% de la parte superior del elemento padre */
+    transform: translate(-50%, -50%); /* Desplaza el formulario hacia atrás en un 50% de su propio ancho y alto */
+  }
+
+.text-center{
+    text-align: center;
+  }
