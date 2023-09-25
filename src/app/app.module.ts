@@ -19,7 +19,6 @@ import { RegistroComponent } from './components/registro/registro.component';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
