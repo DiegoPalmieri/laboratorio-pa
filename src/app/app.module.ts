@@ -7,12 +7,16 @@ import { LoginComponent } from './components/login/login.component';
 import { MaterialModule } from './angular-material/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroComponent } from './components/registro/registro.component';
+import { ProfesorComponent } from './components/usuarios/profesor/profesor.component';
+import { AdminComponent } from './components/usuarios/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ProfesorComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
