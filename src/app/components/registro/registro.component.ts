@@ -1,4 +1,4 @@
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class RegistroComponent {
   registroForm: FormGroup;
 
-  constructor() {
-    this.registroForm = new FormGroup({
+  constructor(formBuilder: FormBuilder) {
+    this.registroForm = formBuilder.group({
       username: new FormControl('', Validators.required),
       identificacion: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
