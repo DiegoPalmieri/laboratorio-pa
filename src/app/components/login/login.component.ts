@@ -29,5 +29,7 @@ export class LoginComponent {
     } else if (this.formulario.valid) {
       Swal.fire('Correcto', '', 'success');
     }
+
+    console.log(this.formulario.value);
   }
 }

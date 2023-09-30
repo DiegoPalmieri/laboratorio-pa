@@ -1,5 +1,5 @@
 <div class="formularioRegistro">
-    <form [formGroup]="registroForm" autocomplete="off" class="registro">
+    <form [formGroup]="registroForm" autocomplete="off" class="registro" (ngSubmit)="botonRegistro()">
         <mat-card class="card mx-auto mt-5" style="width: 18rem">
             <mat-card-header class="text-center bg-primary text-white">
                 <mat-card-title class="text-center">REGISTRO</mat-card-title>
@@ -11,8 +11,8 @@
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput type="text" maxlength="10" placeholder="Identificación"
-                        formControlName="identificacion" />
+                    <input matInput type="number" maxlength="10" placeholder="Identificación"
+                        formControlName="identificacion" class="input-identificacion"/>
                     <mat-icon matSuffix disabled="false">fingerprint</mat-icon>
                 </mat-form-field>
 
@@ -40,9 +40,8 @@
                 </mat-form-field>
 
                 <div class="text-center">
-                    <button mat-raised-button color="primary" class="text-center" [disabled]="registroForm.invalid">
+                    <button mat-raised-button color="primary" class="text-center" [disabled]="registroForm.invalid" type="submit">
                         REGISTRARSE
-
                         <mat-icon matSuffix disabled="false">person_add</mat-icon>
                     </button>
                 </div>

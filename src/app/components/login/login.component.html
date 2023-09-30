@@ -1,5 +1,5 @@
 <div class="form">
-    <form [formGroup]="formulario" autocomplete="off" class="fomulario">
+    <form [formGroup]="formulario" autocomplete="off" class="fomulario" (ngSubmit)="botonLogin()">
         <mat-card class="card mx-auto mt-5" style="width: 18rem">
             <mat-card-header class="text-center bg-primary text-white">
                 <mat-card-title class="text-center">LOGIN</mat-card-title>
@@ -30,7 +30,7 @@
                 </mat-form-field>
 
                 <div class="text-center">
-                    <button mat-raised-button color="primary" [disabled]="formulario.invalid" (click)="botonLogin()">
+                    <button mat-raised-button color="primary" [disabled]="formulario.invalid" type="submit">
                         LOGIN
                         <mat-icon matSuffix disabled="false">login</mat-icon>
                     </button>
@@ -39,7 +39,7 @@
 
                 <div class="text-center">
                     <p>¿No tienes una cuenta?<br /></p>
-                    <a routerLink="registro">Registrate</a>
+                    <a routerLink="registro">REGISTRATE</a>
                 </div>
             </mat-card-content>
         </mat-card>
