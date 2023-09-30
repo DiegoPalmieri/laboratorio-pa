@@ -18,7 +18,7 @@
 
                 <mat-form-field for="rol">
                     <mat-label>Rol</mat-label>
-                    <mat-select formControlName="rol" >
+                    <mat-select formControlName="rol">
                         <mat-option value="">Seleccione</mat-option>
                         <mat-option value="profesor">Profesor
                             <mat-icon matSuffix disabled="false">group</mat-icon>
@@ -30,7 +30,7 @@
                 </mat-form-field>
 
                 <div class="text-center">
-                    <button mat-raised-button color="primary" (click)="botonLogin()">
+                    <button mat-raised-button color="primary" [disabled]="formulario.invalid" (click)="botonLogin()">
                         LOGIN
                         <mat-icon matSuffix disabled="false">login</mat-icon>
                     </button>

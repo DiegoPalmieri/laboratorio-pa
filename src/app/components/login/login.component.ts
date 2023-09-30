@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,8 +15,8 @@ import Swal from 'sweetalert2';
 export class LoginComponent {
   formulario: FormGroup;
 
-  constructor() {
-    this.formulario = new FormGroup({
+  constructor(formBuilder: FormBuilder) {
+    this.formulario = formBuilder.group({
       email: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
       rol: new FormControl('', Validators.required),
