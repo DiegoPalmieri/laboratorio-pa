@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ProfesorComponent } from './components/usuarios/profesor/profesor.component';
 import { AdminComponent } from './components/usuarios/admin/admin.component';
+import { PeticionesComponent } from './components/usuarios/admin/peticiones/peticiones.component';
+import { HistorialComponent } from './components/usuarios/admin/historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AdminComponent } from './components/usuarios/admin/admin.component';
     LoginComponent,
     RegistroComponent,
     ProfesorComponent,
-    AdminComponent
+    AdminComponent,
+    PeticionesComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,
