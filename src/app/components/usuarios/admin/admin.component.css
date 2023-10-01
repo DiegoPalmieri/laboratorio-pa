@@ -1,0 +1,11 @@
+mat-toolbar{
+    justify-content: center;
+}
+
+mat-tab-group{
+    margin: 0 auto;
+}
+
+mat-tab-label{
+    font-size: 12px;
+}
