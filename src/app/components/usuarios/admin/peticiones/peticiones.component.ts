@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -6,17 +6,23 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './peticiones.component.html',
   styleUrls: ['./peticiones.component.css'],
 })
-export class PeticionesComponent {
+export class PeticionesComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
 
-  displayedColumns = [
-    {
-      profesor: 'Andres Carmona',
-      horaInicio: '3:13 p.m',
-      horaFin: '5:30 pm',
-      fecha: '6/10/2023',
-      recurso: 'VIDEO BIN',
-      acciones: ''
-    },
+  displayedColumns: string[] = [
+    'profesor',
+    'horaInicio',
+    'horaFin',
+    'fecha',
+    'recurso',
   ];
+
+  ngOnInit(): void {
+    this.getData();
+  }
+
+  getData() {
+    this.dataSource = new MatTableDataSource(this.displayedColumns);
+    console.log(this.dataSource);
+  }
 }
