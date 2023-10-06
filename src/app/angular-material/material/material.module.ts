@@ -20,6 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [],
@@ -46,6 +48,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDialogModule,
     MatChipsModule,
     MatCheckboxModule,
+    MatNativeDateModule,
   ],
   exports: [
     MatButtonModule,
@@ -69,6 +72,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDialogModule,
     MatChipsModule,
     MatCheckboxModule,
+    MatNativeDateModule
   ],
 })
 export class MaterialModule {}
