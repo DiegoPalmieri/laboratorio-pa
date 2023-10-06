@@ -1,11 +1,13 @@
-mat-toolbar{
-    justify-content: center;
+mat-tab-group {
+  margin: 0 auto;
 }
 
-mat-tab-group{
-    margin: 0 auto;
+mat-tab-label {
+  font-size: 12px;
 }
 
-mat-tab-label{
-    font-size: 12px;
+mat-toolbar {
+  background-color: rgb(66, 110, 231);
+  color: white;
+  justify-content: center;
 }
