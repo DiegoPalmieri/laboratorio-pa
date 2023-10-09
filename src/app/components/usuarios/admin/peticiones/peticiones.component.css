@@ -10,6 +10,7 @@ mat-toolbar {
 td,
 th {
   width: 20%;
+  height: 65px;
 }
 
 table {
