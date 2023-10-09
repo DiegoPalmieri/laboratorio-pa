@@ -2,3 +2,21 @@ mat-toolbar {
   background-color: rgb(66, 110, 231);
   color: white;
 }
+
+.filtro {
+  width: 25%;
+}
+
+td,
+th {
+  width: 20%;
+}
+
+table {
+  filter: drop-shadow(2px 3px 10px grey);
+}
+
+button {
+  position: relative;
+  text-align: center;
+}
