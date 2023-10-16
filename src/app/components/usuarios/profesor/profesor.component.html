@@ -1,24 +1,40 @@
 <mat-card>
-    <mat-toolbar>
-        <span>BIENVENIDO PROFESOR</span>
-    </mat-toolbar>
+  <mat-toolbar>
+    <span>BIENVENIDO PROFESOR</span>
+  </mat-toolbar>
 
-    <mat-card-content>
-        <div>
-            <mat-label>SELECCIONE LOS RECURSOS A RESERVAR: </mat-label>
-            <mat-checkbox value="videoBin">VIDEO BIN</mat-checkbox>
-            <mat-checkbox value="vga">VGA</mat-checkbox>
-            <mat-checkbox value="laptop">LAPTOP</mat-checkbox>
-            <mat-checkbox value="cargador">CARGADOR</mat-checkbox>
-        </div>
+  <mat-card-content>
+    <div class="container">
+      <form [formGroup]="profesorForm">
+        <mat-toolbar class="span-activos">
+          <span>RESERVA DE ACTIVOS</span>
+        </mat-toolbar>
+        <mat-form-field>
+          <mat-label>ACTIVOS A RESERVAR: </mat-label>
+          <mat-select multiple>
+            <mat-optgroup value="">Seleccione</mat-optgroup>
+            <mat-option value="videoBin">VideoBin</mat-option>
+            <mat-option value="laptop">Laptop</mat-option>
+            <mat-option value="vga">VGA</mat-option>
+            <mat-option value="hdmi">HDMI</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-        <div>
-            <mat-form-field>
-                <input matInput [matDatepicker]="dp3" disabled placeholder="Seleccione la Fecha" />
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
-                <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-            </mat-form-field>
-        </div>
-    </mat-card-content>
+        <mat-form-field>
+          <input
+            matInput
+            [matDatepicker]="dp3"
+            disabled
+            placeholder="Seleccione la Fecha"
+          />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="dp3"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-card-content>
 </mat-card>

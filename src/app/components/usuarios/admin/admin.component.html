@@ -1,14 +1,17 @@
 <div>
-  <mat-toolbar>
-    <span> BIENVENIDO ADMINISTRADOR </span>
-  </mat-toolbar>
-
-  <mat-tab-group>
-    <mat-tab label="PETICIONES">
-      <app-peticiones></app-peticiones>
-    </mat-tab>
-    <mat-tab label="HISTORIAL">
-      <app-historial></app-historial>
-    </mat-tab>
-  </mat-tab-group>
+  <mat-card>
+    <mat-card-content>
+      <mat-toolbar>
+        <span> BIENVENIDO ADMINISTRADOR </span>
+      </mat-toolbar>
+      <mat-tab-group>
+        <mat-tab label="PETICIONES">
+          <app-peticiones></app-peticiones>
+        </mat-tab>
+        <mat-tab label="HISTORIAL">
+          <app-historial></app-historial>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
 </div>

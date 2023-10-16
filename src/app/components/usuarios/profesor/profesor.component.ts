@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -11,18 +11,13 @@ import {
   templateUrl: './profesor.component.html',
   styleUrls: ['./profesor.component.css'],
 })
-export class ProfesorComponent {
+export class ProfesorComponent implements OnInit {
   profesorForm!: FormGroup;
 
+
   constructor(private formBuilder: FormBuilder) {
-    this.profesorForm = formBuilder.group({
-      videoBin: new FormControl(' ', Validators.required),
-      vga: new FormControl(' ', Validators.required),
-      laptop: new FormControl(' ', Validators.required),
-      cargador: new FormControl(' ', Validators.required),
-
-
-
-    });
+    this.profesorForm = formBuilder.group({});
   }
+
+  ngOnInit(): void {}
 }
